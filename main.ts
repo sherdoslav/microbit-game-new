@@ -204,12 +204,16 @@ basic.forever(function () {
         }
         if (wall_x == 1 && wall_hole != point_y) {
             basic.showLeds(`
-                # . . . #
-                . # . # .
-                . . # . .
-                . # . # .
-                # . . . #
+                . . . . .
+                # . # . .
+                . # . . .
+                # . # . .
+                . . . . #
                 `)
+            led.plot(4, difficulty_bar)
+            led.plot(4, difficulty_bar + 1)
+            led.plot(4, difficulty_bar + 2)
+            led.plot(4, difficulty_bar + 3)
             set_default_variables()
             can_start = 1
         }
